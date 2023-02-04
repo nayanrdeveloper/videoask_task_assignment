@@ -1,10 +1,16 @@
-import './App.css';
+import "./App.css";
+import VideoPlayer from "./components/VideoPlayer";
+import Campaign from "./pages/Campaign";
+import Webinar from "./pages/Webinar";
+import Welcome from "./pages/Welcome";
 
 function App() {
   return (
-    <div className='bg-pink-600'>
-      <p>Hello Nayan</p>
-    </div>
+    <>
+    <Webinar />
+    {/* <Campaign /> */}
+    {/* <Welcome /> */}
+    </>
   );
 }
 
