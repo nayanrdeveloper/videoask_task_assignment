@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PrimaryButton from "../components/PrimaryButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function SignUp() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="px-20">
+    <section className="px-20" data-aos="fade-up">
       <h3 className="font-semibold text-lg">
         Before you go, please leave your contact details so we can get back to
         you...

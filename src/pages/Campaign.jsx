@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PrimaryButton from "../components/PrimaryButton";
 import VideoPlayer from "../components/VideoPlayer";
 import SignUp from "./SignUp";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Campaign() {
   const [isShowSignup, setIsShowSignup] = useState(false);
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-2" data-aos="fade-up">
       <div>
-        <VideoPlayer src="https://media.videoask.com/transcoded/dabd0292-cf99-40ba-a12a-245a279b31dc/video.mp4?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJtZWRpYV9pZCI6ImRhYmQwMjkyLWNmOTktNDBiYS1hMTJhLTI0NWEyNzliMzFkYyIsImV4cCI6MTY2Mzc3MjE1NH0.sut40p-XhaMDOJL22Fh9dc1f1aj8vOm5oH_ZO0CHs4COrWIDr61tFtfdhaEHJOfZtrWvVao019c4aTqII7CSANLhpcNRE4DKTGlTDP1Mv_riR_GpPwRhqTVnYYrQIX-2gwgOIgmVggpnZJE_gUTddjSlX77-4iqb_k1oPbLy8Hd4fY5ZC3UCLzQz-86OUyhAmaWQwdt0-0V0ynMj_OuVDz4e4pL5xUJobI4ZenGCdm5iNk87JcefFYzcjJLLKO2FvWOoHsq9txrM5NsRZPg-ts1K_fsCnHY1fLrc1pUcjtnfEatklf9SKvoCfw0LbvWCpTq6dVRJfywh1FDmZt2UYbVoebmcmN6Y_2FjWKuMNK2oEVtk8IsXE8rxP718IaZI0MsH-hKT84bvbowWFgeyHqQByuXWIQskPKus7zkVKIDkokkcSyLQTeMEP0FCoGkxhMG4vBGgZIlBppyUe9x4pjo1Ost8EhvZRLTA2Qy-sjjznaib5mRAmgcD64tLvX86uTMnokkpLn5xDNif5XMOyNzRVQk_3OUNZMHUjR4C61UyB7SYlJ2GfP7HYPO2aFwKeWUiSaOHyhzPf1riFTRPpxhE4OEcguLrQt9YmwOSdxV-rVLiOPggWrZDvHxZbNIvCLw9fmjDCOxypu1l7aEkLT4-WNkEzI29IUuI8cwi1Ss" />
+        <VideoPlayer src="https://media.videoask.com/transcoded/435ae671-33f0-45a4-b958-62402c2b6133/video.mp4?token=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZWRpYV9pZCI6IjQzNWFlNjcxLTMzZjAtNDVhNC1iOTU4LTYyNDAyYzJiNjEzMyIsImV4cCI6MTY3NTc4OTkwNH0.A71m_kEUuU_v7PeHJJCD4XIAQapWdXyWfz6N5A_RBDNXrRtrtTZO-x_wAPfrQYINSOCyR3iHVgYvNgk1hqRzVBc7o4bx7sO_Nb1qwtskCMrUlPZXOM_CtZTjn2UArnli6f3o7gO0CpJGlerPXT6WTHt9Bq0vs4vZbbHh0T-C-3z7sIGK5c-O1YYfEFNl0aDIaY46xYZ5EsJB2X3e3JnQeMLUztHtyf3Ddjoh2KxzQNBgcW2sufzgzJe_0FtLlWr1Y_zQCzZ8KdAcbgJIgsCYQFHhmt5mJKK-TveKqwke1nIvWfh32vNRckCo6kWyNxIpd3DpNCAbHrH8w7-N1V8rO2nrwjP0sKA4PUTV6hqeNANtmgTbuilBtm66yTLVYLNWLCt4qbc0HW9Q0RvH3acNWF77M1DY5_SpttM0a5qL5nKa_qoB4kre5SoYEEPMC68MgOeWbAtxyl9MvLQ6psxb3u73fQF7UYcXNkrsxE5DCkEDMHLaib3ijOzwbPD78dZnoMjjhRb-8MI4vNt6joU-uyoGyRrXTWMDyNO6oXsmBrBRcX72dIjLL6YmPX_Zfl7FhFSorhn_YHMmNBZVzLC3KLYd8UT9bzbc4GcO9h43YZ9oy9CXeh6X8PTsf4kfFcoIEe8S9OsNckijCxcP_KwtKLTbZdook4fs6PULigtH3wk" />
       </div>
       <div className="flex flex-col justify-center mx-auto">
         {isShowSignup ? (
