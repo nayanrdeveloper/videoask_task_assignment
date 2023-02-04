@@ -3,7 +3,7 @@ import PrimaryButton from "../components/PrimaryButton";
 
 function SignUp() {
   return (
-    <div className="px-20">
+    <section className="px-20">
       <h3 className="font-semibold text-lg">
         Before you go, please leave your contact details so we can get back to
         you...
@@ -23,9 +23,9 @@ function SignUp() {
             information, please check our privacy policy XXXXX.
           </label>
         </div>
-        <PrimaryButton headerText={'Send Your Answer ->'} />
+        <PrimaryButton headerText={"Send Your Answer ->"} />
       </div>
-    </div>
+    </section>
   );
 }
 
