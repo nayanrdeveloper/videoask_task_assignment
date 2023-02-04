@@ -24,7 +24,7 @@ npm install
 
 ```bash
 npx start
-``
+```
 
 #### Screenshots
 
